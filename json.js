@@ -8,7 +8,7 @@ $(() => {
     });
 
     function getRequest(input) {
-        const url = 'http://www.omdbapi.com/?';
+        const url = 'https://www.omdbapi.com/?';
         const parameters = {
             apikey: '69c74a14',
             s: input,
@@ -21,12 +21,6 @@ $(() => {
     }
 
     function showResults(movies) {
-
-        /*
-        for(let i = 0; i < movies.length; i++) {
-            console.log(movies[i]);
-        }
-        */
         $.each(movies, (i, value) => {
         $('#results').append(`<h3>${value.Title}</h3> <img src="${value.Poster}"><a href="https://www.imdb.com/title/${value.imdbID}">Read More</a>`);
         });
